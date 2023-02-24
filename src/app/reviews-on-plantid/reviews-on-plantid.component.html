@@ -1,0 +1,15 @@
+
+<input type="text"   #orderId >
+<button (click)="getReviews(orderId.value)">OrderId</button> 
+
+<input type="text"   #starRating>
+<button (click)="getReviewsByStarRating(starRating.value)">starRating</button>
+
+
+<div *ngFor="let x of allReviews">
+    <div> customerName: {{x.customerName}} </div>
+    <div>OrderId : {{x.orderId}}</div>
+    <div>msg  :{{x.msg}}</div>
+    <div>starRating : {{x.starRating}}</div><br/>
+    <hr>
+</div>
